@@ -2,7 +2,12 @@
   "name": "alm-monorepo",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "start": "nx run-many -t serve -p portal first-microapp second-microapp",
+    "start:portal": "nx run portal:serve",
+    "start:first": "nx run first-microapp:serve",
+    "start:second": "nx run second-microapp:serve"
+  },
   "private": true,
   "devDependencies": {
     "@angular-devkit/build-angular": "~18.0.0",

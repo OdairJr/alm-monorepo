@@ -59,6 +59,9 @@
           "buildTarget": "second-microapp:build:development"
         }
       },
+      "options": {
+        "port": 4445
+      },
       "defaultConfiguration": "development"
     },
     "extract-i18n": {

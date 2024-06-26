@@ -59,6 +59,9 @@
           "buildTarget": "first-microapp:build:development"
         }
       },
+      "options": {
+        "port": 4444
+      },
       "defaultConfiguration": "development"
     },
     "extract-i18n": {
