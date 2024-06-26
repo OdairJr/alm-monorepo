@@ -1,0 +1,9 @@
+{
+  "name": "first-microapp-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "packages/first-microapp-e2e/src",
+  "implicitDependencies": ["first-microapp"],
+  "// targets": "to see all targets run: nx show project first-microapp-e2e --web",
+  "targets": {}
+}
