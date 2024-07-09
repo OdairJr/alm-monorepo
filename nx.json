@@ -5,7 +5,7 @@
   "nxCloudAccessToken": "ZTE0MDI0OGEtMjg3ZC00NGY0LThmNDgtOWJkNjdhMGVmZDkzfHJlYWQtd3JpdGU=",
   "targetDefaults": {
     "@angular-devkit/build-angular:application": {
-      "cache": true,
+      "cache": false,
       "dependsOn": ["^build"],
       "inputs": ["default", "^default"]
     },
@@ -19,7 +19,7 @@
       ]
     },
     "@nx/jest:jest": {
-      "cache": true,
+      "cache": false,
       "inputs": ["default", "^default", "{workspaceRoot}/jest.preset.js"],
       "options": {
         "passWithNoTests": true
