@@ -6,7 +6,9 @@
     "start": "nx run-many -t serve -p portal first-microapp second-microapp",
     "start:portal": "nx run portal:serve",
     "start:first": "nx run first-microapp:serve",
-    "start:second": "nx run second-microapp:serve"
+    "start:second": "nx run second-microapp:serve",
+    "build": "nx run-many -t build -p portal first-microapp second-microapp",
+    "test": "nx run-many -t test -p portal first-microapp second-microapp"
   },
   "private": true,
   "devDependencies": {
@@ -61,6 +63,7 @@
     "@angular/platform-browser": "~18.0.0",
     "@angular/platform-browser-dynamic": "~18.0.0",
     "@angular/router": "~18.0.0",
+    "ngx-build-plus": "^18.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"
