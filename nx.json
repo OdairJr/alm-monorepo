@@ -1,8 +1,7 @@
 {
   "extends": "nx/presets/npm.json",
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "defaultBase": "master",
-  "nxCloudAccessToken": "ZTE0MDI0OGEtMjg3ZC00NGY0LThmNDgtOWJkNjdhMGVmZDkzfHJlYWQtd3JpdGU=",
+  "defaultBase": "main",
   "targetDefaults": {
     "@angular-devkit/build-angular:application": {
       "cache": false,
