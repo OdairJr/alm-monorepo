@@ -8,6 +8,8 @@
     "start:first": "nx run first-microapp:serve",
     "start:second": "nx run second-microapp:serve",
     "build": "nx run-many -t build -p portal first-microapp second-microapp",
+    "build:portal": "nx run-many -t build test -p portal",
+    "build:microapp": "nx run-many -t build test -p",
     "test": "nx run-many -t test -p portal first-microapp second-microapp"
   },
   "private": true,
