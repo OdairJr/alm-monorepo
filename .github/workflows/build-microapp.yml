@@ -8,10 +8,11 @@ on:
         required: true
         type: string
 
+run-name: Build Microapp - ${{ inputs.project_name }}
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    name: ${{ format('Build and Deploy Microapp: {0}', github.event.inputs.project_name) }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
