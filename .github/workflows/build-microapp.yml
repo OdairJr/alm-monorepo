@@ -1,4 +1,4 @@
-name: Build Microapp
+name: Build Microapp - ${{ github.event.inputs.project_name }}
 
 on:
   workflow_dispatch:
