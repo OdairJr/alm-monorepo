@@ -37,6 +37,6 @@ jobs:
 
       - name: Sync files to S3
         run: |
-          aws s3 sync ./dist/ s3://alm2-bkt --delete
+          aws s3 sync ./dist/packages s3://alm2-bkt --delete
         env:
           AWS_S3_BUCKET_NAME: alm2-bkt
