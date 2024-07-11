@@ -35,6 +35,6 @@ jobs:
 
       - name: Deploy to S3
         run: |
-          aws s3 sync dist/packages/${{ github.event.inputs.project_name }} s3://alm2-bkt/assets/${{ github.event.inputs.project_name }}
+          aws s3 sync dist/packages/${{ github.event.inputs.project_name }}/browser s3://alm2-bkt/assets/${{ github.event.inputs.project_name }}
         env:
           AWS_S3_BUCKET_NAME: alm2-bkt
