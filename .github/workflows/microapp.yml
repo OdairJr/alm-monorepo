@@ -20,23 +20,23 @@ jobs:
           node-version: '20'
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Run unit tests
         run: npm test
 
-      - name: Build microapp
+      - name: Build microapps
         run: npm run build
 
-      # - name: Configure AWS credentials
-      #   uses: aws-actions/configure-aws-credentials@v1
-      #   with:
-      #     aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-      #     aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      #     aws-region: us-east-1
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: sa-east-1
 
-      # - name: Upload to S3
-      #   run: aws s3 sync ./dist s3://your-s3-bucket/microapp-name/
-
-      # - name: Notify Operator
-      #   run: curl -X POST https://your-operator-webhook-url
+      - name: Sync files to S3
+        run: |
+          aws s3 sync ./dist/ s3://alm2-bkt --delete
+        env:
+          AWS_S3_BUCKET_NAME: alm2-bkt
