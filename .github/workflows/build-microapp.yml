@@ -11,7 +11,7 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    name: format('Build and Deploy Microapp: {0}', github.event.inputs.project_name)
+    name: ${{ format('Build and Deploy Microapp: {0}', github.event.inputs.project_name) }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
