@@ -1,4 +1,4 @@
-name: Build Microapp - ${{ github.event.inputs.project_name }}
+name: Build Microapp
 
 on:
   workflow_dispatch:
@@ -11,6 +11,7 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    name: format('Build and Deploy Microapp: {0}', github.event.inputs.project_name)
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
