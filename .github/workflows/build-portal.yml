@@ -30,6 +30,6 @@ jobs:
 
       - name: Deploy to S3
         run: |
-          aws s3 sync dist/packages/portal s3://alm2-bkt
+          aws s3 sync dist/packages/portal/browser s3://alm2-bkt
         env:
           AWS_S3_BUCKET_NAME: alm2-bkt
